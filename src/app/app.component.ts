@@ -34,8 +34,6 @@ export class AppComponent implements OnInit{
 
   async login() {
 
-    console.log('liff.isLoggedIn()', liff.isLoggedIn());
-
     if (await !liff.isLoggedIn()) {
       liff.login();
 
@@ -54,25 +52,6 @@ export class AppComponent implements OnInit{
 
     var that = this;
 
-    // console.log(this.sever + '/messageing-api');
-    
-    // await axios.get(this.sever + '/messageing-api', {
-    //     params: {
-    //       type: type,
-    //       message: 'test ' + type,
-    //       userId : this.profile.userId,
-    //       name : this.profile.displayName
-    //     },
-    //   })
-    //   .then(function (response) {
-    //     console.log(response);
-    //     that.testReturn = response.data;
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   })
-
-      
       var config = {
         method: 'get',
         headers : {
