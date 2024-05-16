@@ -27,14 +27,15 @@ export class AppComponent implements OnInit{
   }
 
   async ngOnInit() {
-
-      await this.login()
-
+    await liff.init({
+      liffId: '2004884892-Lqj8V40b',
+    });
+    this.login()
   }
 
   async login() {
 
-    if (await !liff.isLoggedIn()) {
+    if (!liff.isLoggedIn()) {
       liff.login();
     }  
     
@@ -69,8 +70,6 @@ export class AppComponent implements OnInit{
       });
 
   }
-
-
 
   sendMessage(){
     console.log('sendMessage', this.textMessage);
