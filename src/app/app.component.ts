@@ -36,17 +36,11 @@ export class AppComponent implements OnInit{
 
     if (await !liff.isLoggedIn()) {
       liff.login();
-      this.profile = await liff.getProfile();
-      console.log('this.profile', this.profile);
+    }  
+    
+    this.profile = await liff.getProfile();
+    console.log('this.profile', this.profile);
 
-    } else {
-      console.log('loginแล้ว');
-
-      this.profile = await liff.getProfile();
-      console.log('this.profile', this.profile);
-      console.log(liff.getOS());
-
-    }
   }
 
   async testMessageingApi(type: string) {
