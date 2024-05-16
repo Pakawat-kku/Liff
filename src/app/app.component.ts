@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   profile: any;
   textMessage: any;
   testReturn : any;
-  sever = "https://dc51-2405-9800-b640-9c0f-a059-10bc-690e-2f0d.ngrok-free.app";
+  sever = "https://936d-2405-9800-b640-9c0f-a059-10bc-690e-2f0d.ngrok-free.app";
 
   constructor() {
   }
@@ -54,21 +54,46 @@ export class AppComponent implements OnInit{
 
     var that = this;
 
-    axios.get( this.sever + '/messageing-api', {
-        params: {
+    // console.log(this.sever + '/messageing-api');
+    
+    // await axios.get(this.sever + '/messageing-api', {
+    //     params: {
+    //       type: type,
+    //       message: 'test ' + type,
+    //       userId : this.profile.userId,
+    //       name : this.profile.displayName
+    //     },
+    //   })
+    //   .then(function (response) {
+    //     console.log(response);
+    //     that.testReturn = response.data;
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   })
+
+      
+      var config = {
+        method: 'get',
+        headers : {
+          'ngrok-skip-browser-warning':  '69420'
+        },
+        url: this.sever + '/messageing-api',
+        params : {
           type: type,
           message: 'test ' + type,
           userId : this.profile.userId,
           name : this.profile.displayName
-        }
-      })
-      .then(function (response) {
+        },
+      };
+      
+     await axios(config).then(function (response) {
         console.log(response);
         that.testReturn = response.data;
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
+      }).catch(function (response) {
+        console.log(response);
+      });
+
   }
 
 
