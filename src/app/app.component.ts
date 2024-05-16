@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   profile: any;
   textMessage: any;
   testReturn : any;
-  sever = "http://localhost:3000";
+  sever = "https://dc51-2405-9800-b640-9c0f-a059-10bc-690e-2f0d.ngrok-free.app";
 
   constructor() {
   }
