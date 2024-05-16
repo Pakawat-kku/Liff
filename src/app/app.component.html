@@ -1,0 +1,72 @@
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <h2>liff</h2>
+<input type="text" [(ngModel)]="textMessage" >
+<button (click)="sendMessage()">send</button><br>
+<h2 id="testReturn" *ngIf="testReturn">{{testReturn}}</h2>
+<button (click)="logout()">logout</button> -->
+<mat-card>
+
+  <mat-card-content style="text-align: center;">
+    <h1 *ngIf="profile" >Hello {{ profile.displayName }}</h1>
+    <img *ngIf="profile" [src]="profile.pictureUrl" width="50%">
+    <br><br>
+    <mat-card (click)="testMessageingApi('text')">
+      <mat-card-content >
+        <div style="text-align:center;">
+          <mat-card-title >
+            Text message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card (click)="testMessageingApi('sticker')">
+      <mat-card-content>
+        <div style="text-align:center;">
+          <mat-card-title >
+            Sticker message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card (click)="testMessageingApi('image')">
+      <mat-card-content>
+        <div style="text-align:center;">
+          <mat-card-title >
+            Image message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card (click)="testMessageingApi('video')">
+      <mat-card-content>
+        <div style="text-align:center;">
+          <mat-card-title >
+            Video message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <div style="text-align:center;">
+          <mat-card-title >
+            Audio message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card (click)="testMessageingApi('location')">
+      <mat-card-content>
+        <div style="text-align:center;">
+          <mat-card-title >
+            Location message
+          </mat-card-title>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
+
+
