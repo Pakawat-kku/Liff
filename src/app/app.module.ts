@@ -8,12 +8,6 @@ import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-
-import liff from '@line/liff';
-
-liff.init({
-    liffId: '2004884892-Lqj8V40b',
-});
 @NgModule({
   declarations: [
     AppComponent,

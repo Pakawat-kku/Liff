@@ -6,15 +6,6 @@ import axios from 'axios';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  styles: [`
-    ::ng-deep nb-layout-column {
-      justify-content: center;
-      display: flex;
-    }
-    nb-chat {
-      width: 500px;
-    }
-  `],
 })
 export class AppComponent implements OnInit{
   title = 'Riff_Project';
@@ -30,6 +21,7 @@ export class AppComponent implements OnInit{
     await liff.init({
       liffId: '2004884892-Lqj8V40b',
     });
+    
     this.login()
   }
 
