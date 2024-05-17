@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
   profile: any;
   textMessage: any;
   testReturn : any;
-  sever = "https://936d-2405-9800-b640-9c0f-a059-10bc-690e-2f0d.ngrok-free.app";
+  sever = "https://b544-2405-9800-b640-9c0f-3899-c1d2-81de-ee9c.ngrok-free.app";
 
   constructor() {
   }
